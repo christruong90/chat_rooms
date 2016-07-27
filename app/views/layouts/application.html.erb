@@ -9,12 +9,11 @@
   </head>
 
   <body>
-    <%= link_to 'Start Here', root_path %>
-    |
+
     <% if user_signed_in? %>
-      <span class="text-muted">Logged in as <strong><%= current_user.name %></strong></span>
+      <span class="text-muted">Logged in as <strong><%= link_to current_user.username, edit_user_registration_path  %></strong></span>
       |
-      <%= link_to 'Edit Profile', edit_user_registration_path %>
+      <%= link_to 'Chat Rooms', root_path %>
       |
       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
       <% end %>
