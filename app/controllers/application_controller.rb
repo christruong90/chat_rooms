@@ -4,6 +4,17 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  def emojify(content)
+    content.to_str.gsub(/:([\w+-]+):/) do |match|
+      if emoji = Emoji.find_by_alias($1)
+        emoji.raw
+      else
+        match
+      end
+    end.html_safe if content.present?
+  end
+  helper_method :emojify
+
   protected
 
   def configure_permitted_parameters

@@ -47,6 +47,7 @@ group :development do
   gem 'awesome_print'
   gem 'redis'
   gem 'hirb'
+  gem 'gemoji'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

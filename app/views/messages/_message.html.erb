@@ -7,7 +7,7 @@
       <div class="col-md-11">
         <p class="card-text">
           <span class="text-muted"><%#= message.timestamp %> <br><%= message.user.username.capitalize  %>:</span><br>
-          <%= message.body %>
+          <%= emojify message.body %>
         </p>
       </div>
     </div>
