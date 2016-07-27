@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <%= link_to 'Start Here', root_path %>
+    |
+    <% if user_signed_in? %>
+      <span class="text-muted">Logged in as <strong><%= current_user.name %></strong></span>
+      |
+      <%= link_to 'Edit Profile', edit_user_registration_path %>
+      |
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% end %>
+
+
     <%= yield %>
   </body>
 </html>

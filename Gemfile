@@ -44,6 +44,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'devise'
   gem 'bootstrap'
+  gem 'awesome_print'
   gem 'redis'
   gem 'hirb'
 end
