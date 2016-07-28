@@ -1,5 +1,15 @@
 <h1><%#= @chat_room.title %></h1>
 
+<style>
+    #remoteVideos video {
+        height: 150px;
+    }
+    #localVideo {
+        height: 150px;
+    }
+</style>
+
+
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>
 </div>
@@ -15,5 +25,7 @@
 
   <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
 
-
 <% end %>
+
+<video id="localVideo"></video>
+<div id="remoteVideos"></div>
