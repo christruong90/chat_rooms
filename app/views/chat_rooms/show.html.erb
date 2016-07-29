@@ -26,6 +26,11 @@
   <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
 
 <% end %>
+<%#= link_to "Logout", sessions_path, method: :delete,
+         data: {confirm: "are you sure you want to log out?"}%>
+<div id='video-button'>
+<button type='button'>Start A Video Call </button>
+</div>
 
 <video id="localVideo"></video>
 <div id="remoteVideos"></div>

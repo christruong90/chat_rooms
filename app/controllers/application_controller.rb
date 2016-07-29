@@ -15,6 +15,20 @@ class ApplicationController < ActionController::Base
   end
   helper_method :emojify
 
+  def authenticate_chatroom!
+    redirect_to new_session_path, notice: 'please login to chatroom' unless chat_room_signed_in?
+  end
+
+  def chat_room_signed_in?
+    current_chat_room.present?
+  end
+  helper_method :chat_room_signed_in?
+
+  def current_chat_room
+    #@current_chat_room ||= ChatRoom.find_by_id[:chat_room_id]
+  end
+  helper_method :current_chat_room
+
   protected
 
   def configure_permitted_parameters
