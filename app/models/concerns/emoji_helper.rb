@@ -1,4 +1,4 @@
-module EmojiHep
+module EmojiHelper
   def emojify(content)
     h(content).to_str.gsub(/:([\w+-]+):/) do |match|
       if emoji = Emoji.find_by_alias($1)
@@ -7,4 +7,5 @@ module EmojiHep
         match
       end
     end.html_safe if content.present?
+  end
 end
