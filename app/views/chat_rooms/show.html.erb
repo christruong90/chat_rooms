@@ -29,7 +29,8 @@
 <%#= link_to "Logout", sessions_path, method: :delete,
          data: {confirm: "are you sure you want to log out?"}%>
 <div id='video-button'>
-<button type='button'>Start A Video Call </button>
+  <button type='button'>Start A Video Call </button>
+  <button type='button' id='pause-button' class="btn btn-success">Pause</button>
 </div>
 
 <video id="localVideo"></video>
