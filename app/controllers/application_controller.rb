@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def emojify(content)
     content.to_str.gsub(/:([\w+-]+):/) do |match|
-      if emoji = Emoji.find_by_alias($1)
+      if emoji = ::Emoji.find_by_alias($1)
         emoji.raw
       else
         match
