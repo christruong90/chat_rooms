@@ -1,5 +1,5 @@
 
-jQuery(document).on 'turbolinks:load', ->
+jQuery(document).ready ->
   messages = $('#messages')
   if $('#messages').length > 0
     messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
