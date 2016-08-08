@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <div class='container'>
+
     <title>Chat</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -19,7 +21,7 @@
       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
       <% end %>
 
-
     <%= yield %>
+  </div>
   </body>
 </html>
