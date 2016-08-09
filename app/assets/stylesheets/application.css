@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+ span.text-muted {
+  color: #0070CA;
+ }
+
+ ol.breadcrumb {
+   background-color: #e5cdb3;
+ }
