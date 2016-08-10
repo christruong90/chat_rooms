@@ -16,7 +16,7 @@
       <% if user_signed_in? %>
     <ol class="breadcrumb navbar-fixed-top">
 
-        <li><span class="text-muted">Logged in as <strong><%= emojify link_to current_user.username, edit_user_registration_path  %></strong></span></li>
+        <li><span class='log'>Logged in as </span><strong><%= emojify link_to current_user.username, edit_user_registration_path  %></strong><span class='log'></li>
         <li><%= link_to 'Chat Rooms', root_path %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <% end %>
