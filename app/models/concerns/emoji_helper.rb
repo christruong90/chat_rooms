@@ -1,3 +1,5 @@
+
+
 module EmojiHelper
   def emojify(content)
     h(content).to_str.gsub(/:([\w+-]+):/) do |match|
